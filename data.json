@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "shop": {
+    "name": "PUCIBO",
+    "line": "RISTORANTE",
+    "meaning": "纯粹之食",
+    "slogan": "意式手作·本味纯正",
+    "city": "济南",
+    "place": "万象城 L1",
+    "unit": "聚场 CL103B",
+    "address": "经十路 11111 号济南万象城聚场 L1 层 CL103B",
+    "kind": "正宗意式手作餐厅，堂食 + 外卖"
+  },
+  "updated_at": "2026-11-22T20:54:00+09:00",
+  "updated_label": "2026-11-22（周日）东京 20:54（济南 19:54）",
+  "updated_sub": "公开页截至 2026-11-22 20:54 东京 · 简报截至 2026-10-22 · 济南比东京慢 1 小时",
+  "status": "框架版 · 经营数字待接入",
+  "header_note": "框架已搭好，营业额、单数、毛利、核销率都还没接上。公开口碑停在 2026-11-22 20:54 东京。佛罗伦萨 T 骨是计划中 / 即将上线。",
+  "framework": "营业额、单数、毛利、核销率全部待接入。接上美团外卖、淘宝闪购、大众点评、抖音来客、收银、WPS 日账和每份菜成本表之后，每天只改 data.json。",
+  "footer": "口径：堂食人均 = 堂食实收 ÷ 就餐人数，人数以收银为准。外卖客单价 = 顾客实付 ÷ 单数，分美团、闪购两口。毛利率 =（营业额 − 平台抽佣 − 食材成本）÷ 营业额。食材成本率 = 当期食材消耗 ÷ 营业额，消耗来自 WPS 日账。抽佣率以各平台结算单为准，接入前不填估计值。公开口碑抓取于 2026-11-22 20:54 东京，只读公开网页，未登录、未扫码、未互动。佛罗伦萨 T 骨是计划中 / 即将上线。来源：项目简报（截至 2026-10-22）、品牌手册（18 页）、大拙给老车的语音说明，以及每张卡上的公开链接。",
+  "how_to_update": "以后每天只改 data.json。写着 null 的格子，页面会显示「待接入」。不要在页面里另写一套数字。",
+  "alerts": [
+    "经营数字全部待接入，本页是框架",
+    "佛罗伦萨 T 骨计划中 / 即将上线，还没上",
+    "公开口碑抓取于 2026-11-22 20:54 东京",
+    "老车待办 11 条，均未完成",
+    "抽佣率接入前不填估计值",
+    "人均路径是简报：现状 ¥115，3 个月 ¥150，6 个月 ¥180，不是今日实测"
+  ],
+  "kpis": {
+    "periods": ["今日", "本周", "本月"],
+    "rows": [
+      {
+        "name": "营业额 · 堂食",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "收银系统 + 点评 / 抖音核销"
+      },
+      {
+        "name": "营业额 · 美团外卖",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "美团外卖商家后台"
+      },
+      {
+        "name": "营业额 · 淘宝闪购",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "淘宝闪购商家后台"
+      },
+      {
+        "name": "营业额 · 抖音团购",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "抖音来客后台"
+      },
+      {
+        "name": "营业额 · 合计",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "以上四口汇总"
+      },
+      {
+        "name": "单数 / 桌数",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "各平台订单 + 收银"
+      },
+      {
+        "name": "堂食人均",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "¥150（3 个月）→ ¥180（6 个月）",
+        "source": "收银系统"
+      },
+      {
+        "name": "外卖客单价",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "美团 / 闪购后台"
+      },
+      {
+        "name": "毛利率",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "营业额 − 抽佣 − 食材成本"
+      },
+      {
+        "name": "食材成本率",
+        "today": null,
+        "week": null,
+        "month": null,
+        "target": "待定",
+        "source": "WPS 日账 + 每份菜成本表"
+      }
+    ],
+    "path": {
+      "title": "人均目标路径（简报）",
+      "note": "简报口径，不是今日收银实测。今日、本周、本月的人均仍待接入。",
+      "emphasis": 2,
+      "items": [
+        {"label": "现状", "value": 115, "display": "¥115"},
+        {"label": "3 个月目标", "value": 150, "display": "¥150"},
+        {"label": "6 个月目标", "value": 180, "display": "¥180"}
+      ]
+    },
+    "definitions": [
+      {"title": "堂食人均", "detail": "堂食实收 ÷ 就餐人数，人数以收银为准"},
+      {"title": "外卖客单价", "detail": "顾客实付 ÷ 单数，分美团、闪购两口"},
+      {"title": "毛利率", "detail": "（营业额 − 平台抽佣 − 食材成本）÷ 营业额"},
+      {"title": "食材成本率", "detail": "当期食材消耗 ÷ 营业额，消耗来自 WPS 日账"}
+    ]
+  },
+  "channels": {
+    "note": "抽佣率一律以各平台结算单为准，接入前不填估计值。",
+    "rows": [
+      {
+        "name": "堂食（收银）",
+        "income": "到店点单实收",
+        "fee": "无平台抽佣；支付手续费待接入",
+        "share": null,
+        "source": "收银系统导出"
+      },
+      {
+        "name": "大众点评团购",
+        "income": "团购券核销 + 到店加购",
+        "fee": null,
+        "share": null,
+        "source": "点评商家后台结算单"
+      },
+      {
+        "name": "抖音团购",
+        "income": "¥39.9 / ¥9.9 / ¥228 三个券",
+        "fee": null,
+        "share": null,
+        "source": "抖音来客结算单"
+      },
+      {
+        "name": "美团外卖",
+        "income": "外卖实收",
+        "fee": null,
+        "share": null,
+        "source": "美团外卖结算单"
+      },
+      {
+        "name": "淘宝闪购",
+        "income": "外卖实收",
+        "fee": null,
+        "share": null,
+        "source": "闪购结算单"
+      }
+    ]
+  },
+  "dishes": {
+    "note": "外卖价是门口物料目前用的美团外送价（简报待办第 3 条），堂食价待老车确认。成本和份数要等每份菜成本表和平台订单明细。佛罗伦萨 T 骨还没上，只标计划中 / 即将上线。",
+    "rows": [
+      {
+        "name": "把子肉手握披萨",
+        "role": "引流（抖音团购 ¥39.9）",
+        "takeout": "¥47 · 神抢手 ¥29",
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "玛格丽特披萨",
+        "role": "招牌",
+        "takeout": "¥98",
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "生火腿披萨",
+        "role": "招牌",
+        "takeout": "¥108",
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "牛肉酱意面",
+        "role": "招牌",
+        "takeout": "¥47",
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "其他窑烤披萨",
+        "role": "招牌",
+        "takeout": null,
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "其他手作意面",
+        "role": "招牌",
+        "takeout": null,
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "帕尔玛火腿配蜜瓜",
+        "role": "意式肉艺",
+        "takeout": null,
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "托斯卡纳腊肠 Finocchiona",
+        "role": "意式肉艺",
+        "takeout": null,
+        "dine": "待确认",
+        "cost": null,
+        "margin": null,
+        "count": null
+      },
+      {
+        "name": "佛罗伦萨 T 骨牛排",
+        "role": "拉客单",
+        "sale": "计划中 / 即将上线",
+        "takeout": "计划中 / 即将上线",
+        "dine": "计划中 / 即将上线",
+        "cost": null,
+        "margin": null,
+        "count": null,
+        "note": "还没上。这里不把它写成已经在卖。"
+      }
+    ]
+  },
+  "deals": {
+    "intro": "三个券的售出、核销、到店实付和获客成本都还没有后台数。门槛来自项目简报。",
+    "thresholds": [
+      {"label": "核销率", "value": "≥ 60%"},
+      {"label": "到店实付", "value": "≥ ¥180 / 桌"},
+      {"label": "获客成本", "value": "≤ ¥40 / 核销家庭"}
+    ],
+    "funnel": {
+      "title": "漏斗环节（示意，无数据）",
+      "steps": [
+        {"name": "曝光", "value": null},
+        {"name": "购券", "value": null},
+        {"name": "核销到店", "value": null},
+        {"name": "加购 / 实付", "value": null},
+        {"name": "复购与好评", "value": null}
+      ]
+    },
+    "rows": [
+      {
+        "name": "¥39.9 把子肉手握披萨",
+        "who": "全城引流",
+        "sold": null,
+        "redeem": null,
+        "ticket": null,
+        "cac": null,
+        "pass": null
+      },
+      {
+        "name": "¥9.9 宝宝的第一顿西餐券",
+        "who": "万象城宝妈",
+        "sold": null,
+        "redeem": null,
+        "ticket": null,
+        "cac": null,
+        "pass": null
+      },
+      {
+        "name": "¥228 三口之家",
+        "who": "家庭客",
+        "sold": null,
+        "redeem": null,
+        "ticket": null,
+        "cac": null,
+        "pass": null
+      }
+    ],
+    "fields": [
+      {"key": "sold", "label": "售出"},
+      {"key": "redeem", "label": "核销率"},
+      {"key": "ticket", "label": "到店实付 / 桌"},
+      {"key": "cac", "label": "获客成本"},
+      {"key": "pass", "label": "过门槛"}
+    ]
+  },
+  "ledger": {
+    "note": "老车给出 WPS 在线链接（查看权限）之后，每天读一次，出食材消耗、进货和借款。链接不要写进这个公开页面。",
+    "rows": [
+      {"field": "日期", "use": "每日一行", "status": null},
+      {"field": "食材进货（供应商 / 品项 / 金额）", "use": "算食材成本率", "status": null},
+      {"field": "食材消耗", "use": "对照每份菜成本表看损耗", "status": null},
+      {"field": "借款 / 垫付", "use": "资金往来单列，不进经营利润", "status": null},
+      {"field": "房租、人工、水电等费用", "use": "算月度净利", "status": null}
+    ]
+  },
+  "social": {
+    "intro": "以下公开数据抓取于 2026-11-22 20:54 东京时间。只读公开网页，未登录、未扫码、未互动。拿不到的数字写「公开页未显示」或「待接入」，不编造。",
+    "rows": [
+      {
+        "name": "大众点评（PUCIBO）",
+        "watch": "评分、评价数、差评关键词、榜单排名",
+        "value": "公开页未显示（PC 落到登录/验证页；本次未登录、未扫码）",
+        "kind": "empty",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "dianping.com",
+        "url": "https://www.dianping.com/"
+      },
+      {
+        "name": "美团（到店 / 外卖公开页）",
+        "watch": "店铺评分、团购套餐与已售",
+        "value": "公开页未显示（搜索跳转或返回空页）",
+        "kind": "empty",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "meituan.com",
+        "url": "https://www.meituan.com/"
+      },
+      {
+        "name": "小红书（店铺号）",
+        "watch": "粉丝、笔记互动、店铺相关笔记数",
+        "value": "公开检索未找到店铺号；搜索页无可引用笔记数。账号名仍待老车提供",
+        "kind": "empty",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "xiaohongshu.com 返回 500",
+        "url": "https://www.xiaohongshu.com/"
+      },
+      {
+        "name": "抖音（店铺号 / 团购）",
+        "watch": "粉丝、视频播放、团购挂车",
+        "value": "未登录检索，公开搜索页未返回可引用的粉丝、播放或团购数字；账号名仍待老车提供",
+        "kind": "empty",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "douyin.com/search",
+        "url": "https://www.douyin.com/search"
+      },
+      {
+        "name": "抖音话题搜索量",
+        "watch": "济南万象城、济南意大利餐厅、济南西餐、T骨牛排济南、手握披萨",
+        "value": "公开页未显示（巨量算数需前端渲染，未登录下无指数；抖音搜索页无播放量/话题量）。话题只是检索词。本店佛罗伦萨 T 骨是计划中 / 即将上线。",
+        "kind": "empty",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "巨量算数",
+        "url": "https://trendinsight.oceanengine.com/",
+        "url2_label": "抖音搜索",
+        "url2": "https://www.douyin.com/search"
+      },
+      {
+        "name": "百度地图（PUCIBO）",
+        "watch": "评分、评价数、人均、榜单",
+        "value": "4.5 分 / 8 条评价 / 人均 ¥77.6；济南市披萨榜 NO.14、历下区披萨榜 NO.8、万象城小吃快餐榜 NO.4",
+        "kind": "figure",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "百度地图",
+        "url": "https://map.baidu.com/?qt=inf&uid=7fcb17c2af7e842f83a00c53&c=288"
+      },
+      {
+        "name": "携程美食林（PUCIBO）",
+        "watch": "评分、点评数、人均",
+        "value": "暂无评分、暂无点评；人均 ¥97（来自用户反馈）",
+        "kind": "figure",
+        "scraped_at": "2026-11-22 20:54 东京",
+        "source_label": "携程美食林",
+        "url": "https://you.ctrip.com/food/128/136032972.html"
+      }
+    ],
+    "place": {
+      "title": "公开页上的店铺信息",
+      "items": [
+        {
+          "label": "地图 / 旅游店名",
+          "value": "PuCibo意大利餐厅·窑烤披萨(万象城店)；别名 PuCibo(济南华润万象城店)。公开页用的是这套拼写。"
+        },
+        {
+          "label": "地址",
+          "value": "经十路 11111 号济南万象城聚场 L1 层 CL103B"
+        },
+        {
+          "label": "公开页电话（两处不一致，待老车确认）",
+          "value": "携程 / 永安旅游 18888379590；百度地图 13793123003"
+        },
+        {
+          "label": "营业时间（百度地图）",
+          "value": "周一至周五 11:00-14:30、16:30-21:00；周六 11:00-21:30；周日 11:00-21:00。时段字段更新于 2026-03-15 09:22 东京"
+        }
+      ],
+      "hours_conflict": "同程游记（2025-04-08）写的营业时间是 11:00-14:30、16:30-22:00，结束点与百度地图不一致。",
+      "links": [
+        {"label": "百度地图", "url": "https://map.baidu.com/?qt=inf&uid=7fcb17c2af7e842f83a00c53&c=288"},
+        {"label": "携程美食林", "url": "https://you.ctrip.com/food/128/136032972.html"},
+        {"label": "同程游记", "url": "https://m.ly.com/trip/detail/2288484"}
+      ]
+    },
+    "quotes_title": "公开口碑",
+    "quotes": [
+      {
+        "text": "推荐意大利肉酱面、安格斯菲力牛排、托斯卡纳三文鱼做法棍、香煎鸡胸沙拉；提到门口与窑炉设计。",
+        "cite": "同程游记，2025-04-08",
+        "url": "https://m.ly.com/trip/detail/2288484"
+      },
+      {
+        "text": "万象城的手工披萨很好吃，环境也不错，牛排、炸海鲜、提拉米苏都很好吃。服务员态度也很好，手提袋整齐摆放。",
+        "cite": "百度地图评论，2023-02-12 21:06",
+        "url": "https://ugc.map.baidu.com/cube/comment/choicepage?tab=1&uid=7fcb17c2af7e842f83a00c53&comment_sort=1"
+      }
+    ],
+    "review_note": "本次未在公开页上看到可引用的差评关键词。携程特色美食列有玛格丽特披萨、帕尔玛火腿佐蜜瓜、安格斯菲力牛排、经典番茄肉酱意面等。",
+    "honors_title": "品牌手册所列荣誉",
+    "honors": [
+      "济南热门榜第三名",
+      "季度好评榜第一名",
+      "外国友人推荐餐厅",
+      "2025 年堂食 / 外卖必点餐厅",
+      "购物中心杰出餐饮品牌"
+    ],
+    "honors_note": "好评榜第一、外国友人推荐、2025 必点餐厅这三条的平台与年份，还要老车确认。见待办。",
+    "conflicts_title": "对外文案前要统一",
+    "conflicts": [
+      {"title": "窑炉温度", "detail": "手册里同时出现 430°C 和 500°C"},
+      {"title": "面团发酵", "detail": "手册里同时出现 48 小时和 72 小时"}
+    ]
+  },
+  "rival": {
+    "title": "爱意 C'è Amore",
+    "us": "PUCIBO",
+    "them": "爱意 C'è Amore",
+    "rows": [
+      {"item": "位置", "us": "万象城 L1 聚场 CL103B", "them": "万象城 L4 L463"},
+      {"item": "背景", "us": "独立品牌", "them": "沈阳爱意集团"},
+      {"item": "人均（简报口径）", "us": "¥115（现状）", "them": "¥130–157"},
+      {"item": "人均（公开页，2026-11-22 东京）", "us": "百度地图 ¥77.6（8 条评价口径）；携程 ¥97（用户反馈，暂无点评）", "them": "百度地图 ¥104（5 条评价口径）；携程 ¥130（用户反馈）；点评发现页 ¥130/人（2024-08-26）"},
+      {"item": "招牌大菜", "us": "佛罗伦萨 T 骨（计划中 / 即将上线）", "them": "¥688 战斧（简报；本次公开页未见标价）"},
+      {"item": "大众点评评分 / 评价数", "us": "公开页未显示（需登录/验证）", "them": "公开页未显示（需登录/验证）。搜狗 2022-08-14 索引快照曾写 4.80 / 2696 条、口味 4.90 / 环境 4.80 / 服务 4.90，不能当作当前分"},
+      {"item": "百度地图评分（2026-11-22 东京）", "us": "4.5 分 / 8 条", "them": "4.4 分 / 5 条"},
+      {"item": "携程（2026-11-22 东京）", "us": "暂无评分、暂无点评", "them": "1 分 / 1 条点评（样本过小，仅作记录）"},
+      {"item": "点评 / 美团 / 抖音团购", "us": "三个券（后台数据待接入）；公开页未显示套餐与已售", "them": "公开检索未找到套餐名、价格或已售数"},
+      {"item": "外卖", "us": "美团 + 淘宝闪购（后台待接入）", "them": "公开页未显示"},
+      {"item": "百度地图榜单（2026-11-22 东京）", "us": "济南市披萨榜 NO.14；历下区披萨榜 NO.8；万象城小吃快餐榜 NO.4", "them": "济南市牛排榜 NO.13；济南市西餐榜 NO.26；万象城西餐榜 NO.2"}
+    ],
+    "bars": {
+      "title": "人均对比（简报口径，元）",
+      "note": "上图仍是简报口径：3 个月目标 ¥150 落在简报中的爱意人均区间内，6 个月目标 ¥180 高过简报上沿。本次公开页人均（百度地图 / 携程）与简报口径不一致，见上表，不互相替代。",
+      "emphasis": 4,
+      "items": [
+        {"label": "PUCIBO 6 个月目标", "value": 180, "display": "¥180"},
+        {"label": "爱意 上沿", "value": 157, "display": "¥157"},
+        {"label": "PUCIBO 3 个月目标", "value": 150, "display": "¥150"},
+        {"label": "爱意 下沿", "value": 130, "display": "¥130"},
+        {"label": "PUCIBO 现状", "value": 115, "display": "¥115"}
+      ]
+    },
+    "extra_title": "爱意公开页补充（2026-11-22 20:54 东京）",
+    "extra": [
+      {"label": "店名", "value": "C'è Amore爱意牛排馆(济南万象城店)"},
+      {"label": "地址 / 电话", "value": "姚家东路万象城 4 层 L463；(0531)82745255"},
+      {"label": "营业时间（百度地图）", "value": "周一至周五 11:00-14:30、17:00-21:00；周六至周日 11:00-21:00。时段字段更新于 2024-07-15"},
+      {"label": "团购", "value": "点评 / 美团 / 抖音生活服务公开页未显示套餐名、价格或已售数"}
+    ],
+    "notes": [
+      {
+        "title": "好评关键词（点评发现页 2024-08-26）",
+        "detail": "称重小战斧牛排约 700g、橄榄油煎口蘑、鱿鱼意面；标价 ¥130/人。",
+        "url": "https://m.dianping.com/discovery/1711442670"
+      },
+      {
+        "title": "好评关键词（百度地图评论 2023-02-13）",
+        "detail": "谷饲菲力七分熟、黑松露薯角、蜂蜜黄芥虾球、金枪鱼玉米粒烤面包、服务到位。"
+      },
+      {
+        "title": "较早的公开差评（微博 2019-10-11，不能当作当前热门差评）",
+        "detail": "马步鱼济南万象城测评：黑金鸡块一般，意大利海鲜意面酱汁口味偏甜。",
+        "url": "https://weibo.com/1409675353/IaUPC6THz"
+      },
+      {
+        "title": "历史快照（不当当前分）",
+        "detail": "搜狗对此店（地址 L463 匹配）的点评索引摘要注明 date=2022-08-14：4.80 分 / 2696 条评价。正式点评页本次未打开，不得用这组数字替代 2026 年现场评分。"
+      }
+    ],
+    "links": [
+      {"label": "爱意 · 百度地图", "url": "https://map.baidu.com/?qt=inf&uid=dea0bb0b8abf07840d3dda5b&c=288"},
+      {"label": "爱意 · 携程", "url": "https://you.ctrip.com/food/128/120738821.html"}
+    ],
+    "boundary": "战斧是爱意菜单上的菜。PUCIBO 的佛罗伦萨 T 骨是计划中 / 即将上线，不写成正在卖的菜。"
+  },
+  "plays": {
+    "rows": [
+      {
+        "layer": "引流",
+        "lever": "¥39.9 把子肉手握披萨",
+        "who": "全城",
+        "effect": "抖音团购拉新",
+        "progress": null
+      },
+      {
+        "layer": "客群",
+        "lever": "¥9.9 宝宝的第一顿西餐券 · ¥228 三口之家",
+        "who": "万象城宝妈、家庭",
+        "effect": "接住商场主力客群",
+        "progress": null
+      },
+      {
+        "layer": "拉客单",
+        "lever": "佛罗伦萨 T 骨牛排",
+        "who": "聚餐、请客",
+        "effect": "把人均从 ¥115 往 ¥150–180 拉",
+        "progress": null,
+        "sale": "计划中 / 即将上线"
+      }
+    ],
+    "todos_title": "老车待办 11 条（状态截至 2026-11-22，均未完成）",
+    "todos": [
+      {"text": "9 张备用菜品原图的菜名", "meta": "QV__8745 / 8934 / 9030 / 9141 / 9237 / 8628 / 8671 / 8697 / 4130", "done": false},
+      {"text": "三款果汁的品名与价格", "done": false},
+      {"text": "堂食价 vs 外卖价", "meta": "门口物料目前用美团外送价：玛格丽特 98、生火腿披萨 108、牛肉酱意面 47、把子肉手握 47 / 神抢手 29", "done": false},
+      {"text": "窑炉温度口径", "meta": "手册 500℃ 与 430℃ 并存，物料统一用了 500℃", "done": false},
+      {"text": "荣誉三条的平台与年份", "meta": "好评榜第一 / 外国友人推荐 / 2025 必点餐厅", "done": false},
+      {"text": "拉取 10 月以来团购核销数据，给投流定基线", "done": false},
+      {"text": "头像切换：外卖 / 闪购 / 点评三端同步", "done": false},
+      {"text": "拍一张「嘴上挂面」的本店小顾客照片，替换 KT 板", "meta": "需家长授权", "done": false},
+      {"text": "立牌实际尺寸用尺子量", "meta": "现为照片估算", "done": false},
+      {"text": "石总确认两个引流款后，更新抖音 Brief 第 5 页", "done": false},
+      {"text": "T 骨供应链：牛源、部位、成本、定价", "meta": "目标做到爱意同档或更高。菜本身仍是计划中 / 即将上线。", "done": false}
+    ]
+  },
+  "sources": {
+    "rows": [
+      {"name": "美团外卖商家后台", "feeds": "KPI、渠道、菜品、抽佣", "need": "账号 + 登录时帮收验证码", "status": "未接入", "tone": "warning"},
+      {"name": "淘宝闪购商家后台", "feeds": "KPI、渠道、菜品、抽佣", "need": "账号 + 登录时帮收验证码", "status": "未接入", "tone": "warning"},
+      {"name": "大众点评商家后台", "feeds": "堂食团购、口碑", "need": "账号 + 登录时帮收验证码", "status": "未接入", "tone": "warning"},
+      {"name": "抖音来客后台", "feeds": "团购漏斗、ROI 门槛", "need": "账号 + 验证码；三个券的商品 ID", "status": "未接入", "tone": "warning"},
+      {"name": "收银系统（建议新增）", "feeds": "堂食营业额、人均、实付/桌", "need": "系统名 + 每日导出或只读账号", "status": "未接入", "tone": "warning"},
+      {"name": "WPS 在线日账", "feeds": "日账、进货、借款", "need": "在线链接（查看权限）", "status": "未接入", "tone": "warning"},
+      {"name": "每份菜成本表", "feeds": "单品毛利、食材成本率", "need": "现成表；没有就给配方克重 + 进货价", "status": "未接入", "tone": "warning"},
+      {"name": "菜单与售价", "feeds": "菜品排行", "need": "堂食 / 外卖最新菜单", "status": "未接入", "tone": "warning"},
+      {"name": "店铺小红书、抖音号", "feeds": "社媒与口碑", "need": "账号名或链接仍待老车提供", "status": "公开检索未找到账号", "tone": "warning"},
+      {"name": "抖音话题搜索量", "feeds": "社媒、竞品", "need": "已查公开页，巨量算数 / 抖音搜索页未显示数字", "status": "已检索，公开页未显示", "tone": "warning"},
+      {"name": "竞品 爱意", "feeds": "竞品看板", "need": "百度地图 / 携程 / 点评发现页已抓；点评 / 美团 / 抖音团购正式页未打开", "status": "部分已抓到", "tone": "success"}
+    ],
+    "password_note": "登录密码不放在这个页面上，也不要提交到公开仓库。需要验证码时，老车当场转发。",
+    "asks_title": "老车最少要给的 5 样",
+    "asks": [
+      "美团外卖 / 淘宝闪购 / 点评 / 抖音来客四个后台的登录方式（登录时帮收验证码），或先每天导出订单表。密码不要发到这个页面。",
+      "WPS 日账在线链接（查看权限）。链接不要写进公开仓库。",
+      "每份菜成本表，或配方克重 + 进货价。",
+      "收银系统堂食流水导出。算人均和到店实付 / 桌，这一项不能少。",
+      "店铺小红书、抖音账号名。"
+    ]
+  }
+}
