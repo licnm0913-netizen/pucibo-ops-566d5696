@@ -1,0 +1,17 @@
+{
+  "name": "PUCIBO 经营作战台",
+  "short_name": "PUCIBO作战台",
+  "description": "济南万象城 L1 PUCIBO 经营作战台：指标、渠道、菜品、团购、日账、口碑与竞品。",
+  "lang": "zh-CN",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1C0A10",
+  "theme_color": "#1C0A10",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
